@@ -24,7 +24,7 @@ public class GradingScale {
             } else if ((userNumberGrade >= 80) && (userNumberGrade <= 83)) {
                 System.out.println("Not too bad, that's a B-.");
             } else if ((userNumberGrade >= 78) && (userNumberGrade <= 79)) {
-                System.out.println("Well, you got at least got a C+.");
+                System.out.println("Well, you at least got a C+.");
             } else if ((userNumberGrade >= 74) && (userNumberGrade <= 77)) {
                 System.out.println("Hey, it could be worse...you got a C.");
             } else if ((userNumberGrade >= 70) && (userNumberGrade <= 73)) {
