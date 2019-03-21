@@ -94,19 +94,9 @@ public class practice {
 
 
         }
+//         Print a Rectangle of asterick
 
-//        Write a program to print a header followed by your initials in block letters like the following:
-//
-//        Lab 0 written by YOURNAME
-//
-//        X     X  Y     Y  ZZZZZZZ
-//        X   X    Y   Y        Z
-//        X X      Y Y        Z
-//        X        Y        Z
-//        X X       Y       Z
-//        X   X      Y      Z
-//        X     X     Y     ZZZZZZZ
-
+        //#####solution4#######
 
         int height;
         int width;
