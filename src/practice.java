@@ -64,64 +64,85 @@ public class practice {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter an integer number (1-99):");
-        int userChoice = scanner.nextInt();
-        System.out.println("Here is your table!");
-//        System.out.println("number | squared | cubed");
-        for (int i = 0; i <= 9; i++) {
-            int j = userChoice + i;
-            System.out.format("%6d | %7d | %6d%n", userChoice, i, j);
+//        System.out.println("Please enter an integer number (1-99):");
+//        int userChoice = scanner.nextInt();
+//        System.out.println("Here is your table!");
+//
+//        for (int i = 0; i <= 9; i++) {
+//            int j = userChoice + i;
+//            System.out.format("%6d | %7d | %6d%n", userChoice, i, j);
+//
+//        }
+////#######solution2
+//        System.out.println("Please enter an integer number (1-99):");
+//        int userInput = scanner.nextInt();
+//        System.out.println("Here is your table!");
+//
+//        for (int i = 0; i <= 9; i++) {
+//            int j = userInput - i;
+//            System.out.format("%6d | %7d | %6d%n", userInput, i, j);
+//
+//        }
+//        //######solution3
+//        System.out.println("Please enter an integer number (1-99):");
+//        int selectedNumber = scanner.nextInt();
+//        System.out.println("Here is your table!");
+//
+//        for (int i = 0; i <= 9; i++) {
+//            int j = selectedNumber *i;
+//            System.out.format("%6d | %7d | %6d%n", selectedNumber, i, j);
+//
+//
+//        }
+////         Print a Rectangle of asterick
+//
+//        //#####solution4#######
+//
+//        int height;
+//        int width;
+//        System.out.println("Please enter the height of the rectangle.");
+//        height = scanner.nextInt();
+//        if (height < 0)
+//        {
+//            height = 1;
+//        }
+//        System.out.println("Please enter the width of the rectangle.");
+//        width = scanner.nextInt();
+//        if(width < 0)
+//        {
+//            width = 1;
+//        }
+//
+//        for(int h = 0; h < height; h++)
+//        {
+//            for(int w = 0; w < width; w++)
+//            {
+//                System.out.print("*");
+//            }
+//            System.out.println(" ");
+//        }
+
+
+
+
+        //BONUS NO 1 FROM DANIEL
+
+//
+//        create three variables, start, end, and sum. Use a loop to find the summation of all the numbers between start and end (inclusive)
+        //#####SOLUTION#########
+        int end ;
+        int start ;
+        int sum=0;
+        System.out.println("enter the start number");
+        start=scanner.nextInt();
+        end=scanner.nextInt();
+        System.out.println("enter the end number");
+        for (int i = start; i <= end; i++) {
+            sum = sum + i;
 
         }
-//#######solution2
-        System.out.println("Please enter an integer number (1-99):");
-        int userInput = scanner.nextInt();
-        System.out.println("Here is your table!");
-//        System.out.println("number | squared | cubed");
-        for (int i = 0; i <= 9; i++) {
-            int j = userInput - i;
-            System.out.format("%6d | %7d | %6d%n", userInput, i, j);
 
-        }
-        //######solution3
-        System.out.println("Please enter an integer number (1-99):");
-        int selectedNumber = scanner.nextInt();
-        System.out.println("Here is your table!");
-//        System.out.println("number | squared | cubed");
-        for (int i = 0; i <= 9; i++) {
-            int j = selectedNumber *i;
-            System.out.format("%6d | %7d | %6d%n", selectedNumber, i, j);
-
-
-        }
-//         Print a Rectangle of asterick
-
-        //#####solution4#######
-
-        int height;
-        int width;
-        System.out.println("Please enter the height of the rectangle.");
-        height = scanner.nextInt();
-        if (height < 0)
-        {
-            height = 1;
-        }
-        System.out.println("Please enter the width of the rectangle.");
-        width = scanner.nextInt();
-        if(width < 0)
-        {
-            width = 1;
-        }
-
-        for(int h = 0; h < height; h++)
-        {
-            for(int w = 0; w < width; w++)
-            {
-                System.out.print("*");
-            }
-            System.out.println(" ");
-        }
-
+        System.out.println("Sum of the number is: "+sum);
 
 
 
