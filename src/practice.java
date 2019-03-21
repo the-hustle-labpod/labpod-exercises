@@ -94,5 +94,48 @@ public class practice {
 
 
         }
+
+//        Write a program to print a header followed by your initials in block letters like the following:
+//
+//        Lab 0 written by YOURNAME
+//
+//        X     X  Y     Y  ZZZZZZZ
+//        X   X    Y   Y        Z
+//        X X      Y Y        Z
+//        X        Y        Z
+//        X X       Y       Z
+//        X   X      Y      Z
+//        X     X     Y     ZZZZZZZ
+
+
+        int height;
+        int width;
+        System.out.println("Please enter the height of the rectangle.");
+        height = scanner.nextInt();
+        if (height < 0)
+        {
+            height = 1;
+        }
+        System.out.println("Please enter the width of the rectangle.");
+        width = scanner.nextInt();
+        if(width < 0)
+        {
+            width = 1;
+        }
+
+        for(int h = 0; h < height; h++)
+        {
+            for(int w = 0; w < width; w++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+
+
+
+
+
+
     }
 }
