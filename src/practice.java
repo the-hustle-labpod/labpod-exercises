@@ -161,7 +161,24 @@ public class practice {
                 System.out.println(counter);
             }
         }
+//      BONUS 3 FROM DANIEL
+//        3) output a table representing the binary representations of the powers of 2
+//        decimal       |       binary
+//        1     |     00000001
+//        2     |     00000010
+//        4     |     00000100
+        //#######SOLUTION#########
 
+                System.out.print("What number would you like to go up to?");
+        int user=scanner.nextInt();
+        System.out.println("number | binary ");
+        System.out.println("------ | ------- ");
+        for(int i = 1; i <= user; i++) {
+            System.out.print(i + " "); //show integer
+            System.out.println(Integer.toBinaryString(i) + "       "); //show binary
+
+
+        }
     }
 }
 
