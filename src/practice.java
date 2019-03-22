@@ -130,23 +130,38 @@ public class practice {
 //
 //        create three variables, start, end, and sum. Use a loop to find the summation of all the numbers between start and end (inclusive)
         //#####SOLUTION#########
-        int end ;
-        int start ;
-        int sum=0;
-        System.out.println("enter the start number");
-        start=scanner.nextInt();
-        end=scanner.nextInt();
-        System.out.println("enter the end number");
-        for (int i = start; i <= end; i++) {
-            sum = sum + i;
+//        int end ;
+//        int start ;
+//        int sum=0;
+//        System.out.println("enter the start number");
+//        start=scanner.nextInt();
+//        end=scanner.nextInt();
+//        System.out.println("enter the end number");
+//        for (int i = start; i <= end; i++) {
+//            sum = sum + i;
+//
+//        }
 
+//        System.out.println("Sum of the number is: "+sum);
+
+
+
+        //BONUS 2 FROM DANIEL
+
+//        2) write a loop which will output all the prime numbers (evenly divisible by only 1 and themselves) between 10 and 10000
+        //#####solution########
+        for(int counter=0;counter<=1000;counter++){
+            boolean notPrime=false;
+            for(int i =2;i<=counter;i++){
+                if(counter%i==0 && i!=counter){
+                     notPrime=true;
+                }
+            }
+            if(notPrime==false){
+                System.out.println(counter);
+            }
         }
-
-        System.out.println("Sum of the number is: "+sum);
-
-
-
-
 
     }
 }
+
