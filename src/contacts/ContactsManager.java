@@ -200,7 +200,7 @@ public class ContactsManager {
 
         for (String line : lines) {
             if (line.contains(fullName)) {
-                newList.add("");
+                newList.remove(fullName);
                 continue;
             }
             newList.add(line);
