@@ -32,16 +32,15 @@ public class ContactsManager {
         System.out.println("1. View contacts.\n" +
                 "2. Add a new contact.\n" +
                 "3. Search a contact by name.\n" +
-                "4. Delete an existing contact.\n" +
-                "5. Exit.\n" +
+                "4. Edit contact name.\n" +
+                "5. Delete an existing contact.\n" +
+                "6. Exit.\n" +
                 "Enter an option (1, 2, 3, 4 or 5): ");
         int choose = input.getInt();
         switch (choose) {
             case 1 :
                 try {
                     viewAllContacts();
-                } catch (NoSuchFileException nsfe){
-                    nsfe.printStackTrace();
                 } catch (IOException ioe) {
                     ioe.printStackTrace();
                 }
@@ -64,13 +63,21 @@ public class ContactsManager {
                 break;
             case 4 :
                 try {
-                    deleteContact();
+                    editContact();
                 } catch (IOException ioe){
                     ioe.printStackTrace();
                 }
 
                 break;
             case 5 :
+                try {
+                    deleteContact();
+                } catch (IOException ioe){
+                    ioe.printStackTrace();
+                }
+
+                break;
+            case 6 :
                 return;
         }
     }
@@ -157,6 +164,26 @@ public class ContactsManager {
             }
         }
         System.out.println();
+        System.out.println();
+        selectionMenu();
+    }
+
+    public static void editContact() throws IOException {
+        System.out.println("Enter contact name to edit: ");
+        String userEdit = input.getString();
+        System.out.println("Enter new contact name: ");
+        String newName = input.getString();
+        List<String> newList = new ArrayList<>();
+        List<String> contacts = Files.readAllLines(dataFile);
+        for (String line : contacts) {
+            if (line.contains(userEdit)) {
+                newName = line.replaceFirst(userEdit, newName);
+                newList.add(newName);
+                continue;
+            }
+            newList.add(line);
+        }
+        Files.write(dataFile, newList);
         System.out.println();
         selectionMenu();
     }
