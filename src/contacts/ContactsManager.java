@@ -1,25 +1,23 @@
 package contacts;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import util.Input;
 
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 @SuppressWarnings("Duplicates")
 public class ContactsManager {
     static Input input;
     static String directory = "src/contacts/data";
     static String filename = "contacts.txt";
-    //    static String filename = "contactlist.txt";
     static Path dataDirectory = Paths.get(directory);
     static Path dataFile = Paths.get(directory, filename);
-    //    static List<Contact> contacts = new ArrayList<>();
     static List<String> iocontacts = new ArrayList<>();
     static List<String> contactlist;
 
+///////////////////////////////////////////
+// Add dashes to 7- and 10-digit numbers //
+///////////////////////////////////////////
     public static String phoneNumConverter(String phoneNum) {
         if (phoneNum.length() == 10) {
             phoneNum = phoneNum.substring(0, 3) + "-" + phoneNum.substring(3, 6) + "-" + phoneNum.substring(6);
@@ -73,7 +71,6 @@ public class ContactsManager {
 
                 break;
             case 5 :
-//                System.exit(0);
                 return;
         }
     }
@@ -152,10 +149,8 @@ public class ContactsManager {
         System.out.printf("%nEnter a last name: %n");
         String lastName = input.getString();
         String fullName = firstName + " " + lastName;
-//        System.out.println(searchFor);
         List<String> contacts = Files.readAllLines(dataFile);
         for(String contact : contacts){
-//            System.out.println(contact);
             if(contact.contains(fullName)){
                 System.out.println("\n");
                 System.out.println(contact);
